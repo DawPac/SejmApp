@@ -7,18 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E20B975C2B5EDA21005ADF5F /* ClubVote.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B975B2B5EDA21005ADF5F /* ClubVote.swift */; };
+		E25A20F62B5FBF8600525E63 /* MPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A20F52B5FBF8600525E63 /* MPView.swift */; };
+		E25A20F82B5FC15C00525E63 /* MP.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A20F72B5FC15C00525E63 /* MP.swift */; };
+		E25A20FA2B5FCCF500525E63 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A20F92B5FCCF500525E63 /* ListItem.swift */; };
 		E29E7E2C2B58668B007CB6D9 /* SejmAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E7E2B2B58668B007CB6D9 /* SejmAppApp.swift */; };
 		E29E7E2E2B58668B007CB6D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E7E2D2B58668B007CB6D9 /* ContentView.swift */; };
 		E29E7E302B58668C007CB6D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E29E7E2F2B58668C007CB6D9 /* Assets.xcassets */; };
 		E29E7E332B58668C007CB6D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E29E7E322B58668C007CB6D9 /* Preview Assets.xcassets */; };
+		E29E7E3F2B586814007CB6D9 /* PrintsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E7E3E2B586814007CB6D9 /* PrintsView.swift */; };
+		E29E7E442B586D57007CB6D9 /* Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E7E432B586D57007CB6D9 /* Print.swift */; };
+		E29E7E482B5877D4007CB6D9 /* CustomPDFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E7E472B5877D4007CB6D9 /* CustomPDFView.swift */; };
+		E29E7E4A2B587B6B007CB6D9 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E29E7E492B587B6B007CB6D9 /* Localizable.xcstrings */; };
+		E29E7E4C2B5884CD007CB6D9 /* Vote.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E7E4B2B5884CD007CB6D9 /* Vote.swift */; };
+		E29E7E4E2B588866007CB6D9 /* VotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E7E4D2B588866007CB6D9 /* VotesView.swift */; };
+		E29E7E502B588C0C007CB6D9 /* ElecVotingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E7E4F2B588C0C007CB6D9 /* ElecVotingView.swift */; };
+		E2F97C812B593D3000C42E2B /* ListVotingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F97C802B593D3000C42E2B /* ListVotingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E20B975B2B5EDA21005ADF5F /* ClubVote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubVote.swift; sourceTree = "<group>"; };
+		E25A20F52B5FBF8600525E63 /* MPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPView.swift; sourceTree = "<group>"; };
+		E25A20F72B5FC15C00525E63 /* MP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MP.swift; sourceTree = "<group>"; };
+		E25A20F92B5FCCF500525E63 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		E29E7E282B58668B007CB6D9 /* SejmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SejmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E29E7E2B2B58668B007CB6D9 /* SejmAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SejmAppApp.swift; sourceTree = "<group>"; };
 		E29E7E2D2B58668B007CB6D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E29E7E2F2B58668C007CB6D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E29E7E322B58668C007CB6D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E29E7E3E2B586814007CB6D9 /* PrintsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintsView.swift; sourceTree = "<group>"; };
+		E29E7E432B586D57007CB6D9 /* Print.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Print.swift; sourceTree = "<group>"; };
+		E29E7E472B5877D4007CB6D9 /* CustomPDFView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPDFView.swift; sourceTree = "<group>"; };
+		E29E7E492B587B6B007CB6D9 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		E29E7E4B2B5884CD007CB6D9 /* Vote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vote.swift; sourceTree = "<group>"; };
+		E29E7E4D2B588866007CB6D9 /* VotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotesView.swift; sourceTree = "<group>"; };
+		E29E7E4F2B588C0C007CB6D9 /* ElecVotingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElecVotingView.swift; sourceTree = "<group>"; };
+		E2F97C802B593D3000C42E2B /* ListVotingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVotingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +59,7 @@
 		E29E7E1F2B58668B007CB6D9 = {
 			isa = PBXGroup;
 			children = (
+				E25A20F92B5FCCF500525E63 /* ListItem.swift */,
 				E29E7E2A2B58668B007CB6D9 /* SejmApp */,
 				E29E7E292B58668B007CB6D9 /* Products */,
 			);
@@ -53,6 +78,17 @@
 			children = (
 				E29E7E2B2B58668B007CB6D9 /* SejmAppApp.swift */,
 				E29E7E2D2B58668B007CB6D9 /* ContentView.swift */,
+				E29E7E4D2B588866007CB6D9 /* VotesView.swift */,
+				E29E7E4F2B588C0C007CB6D9 /* ElecVotingView.swift */,
+				E2F97C802B593D3000C42E2B /* ListVotingView.swift */,
+				E29E7E3E2B586814007CB6D9 /* PrintsView.swift */,
+				E25A20F52B5FBF8600525E63 /* MPView.swift */,
+				E29E7E432B586D57007CB6D9 /* Print.swift */,
+				E29E7E4B2B5884CD007CB6D9 /* Vote.swift */,
+				E25A20F72B5FC15C00525E63 /* MP.swift */,
+				E20B975B2B5EDA21005ADF5F /* ClubVote.swift */,
+				E29E7E472B5877D4007CB6D9 /* CustomPDFView.swift */,
+				E29E7E492B587B6B007CB6D9 /* Localizable.xcstrings */,
 				E29E7E2F2B58668C007CB6D9 /* Assets.xcassets */,
 				E29E7E312B58668C007CB6D9 /* Preview Content */,
 			);
@@ -83,6 +119,8 @@
 			dependencies = (
 			);
 			name = SejmApp;
+			packageProductDependencies = (
+			);
 			productName = SejmApp;
 			productReference = E29E7E282B58668B007CB6D9 /* SejmApp.app */;
 			productType = "com.apple.product-type.application";
@@ -109,8 +147,11 @@
 			knownRegions = (
 				en,
 				Base,
+				pl,
 			);
 			mainGroup = E29E7E1F2B58668B007CB6D9;
+			packageReferences = (
+			);
 			productRefGroup = E29E7E292B58668B007CB6D9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +168,7 @@
 			files = (
 				E29E7E332B58668C007CB6D9 /* Preview Assets.xcassets in Resources */,
 				E29E7E302B58668C007CB6D9 /* Assets.xcassets in Resources */,
+				E29E7E4A2B587B6B007CB6D9 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +179,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E29E7E3F2B586814007CB6D9 /* PrintsView.swift in Sources */,
+				E20B975C2B5EDA21005ADF5F /* ClubVote.swift in Sources */,
+				E29E7E4C2B5884CD007CB6D9 /* Vote.swift in Sources */,
+				E25A20F62B5FBF8600525E63 /* MPView.swift in Sources */,
+				E29E7E4E2B588866007CB6D9 /* VotesView.swift in Sources */,
+				E2F97C812B593D3000C42E2B /* ListVotingView.swift in Sources */,
 				E29E7E2E2B58668B007CB6D9 /* ContentView.swift in Sources */,
 				E29E7E2C2B58668B007CB6D9 /* SejmAppApp.swift in Sources */,
+				E25A20F82B5FC15C00525E63 /* MP.swift in Sources */,
+				E29E7E502B588C0C007CB6D9 /* ElecVotingView.swift in Sources */,
+				E25A20FA2B5FCCF500525E63 /* ListItem.swift in Sources */,
+				E29E7E442B586D57007CB6D9 /* Print.swift in Sources */,
+				E29E7E482B5877D4007CB6D9 /* CustomPDFView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
