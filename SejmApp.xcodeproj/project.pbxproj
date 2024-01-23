@@ -11,6 +11,7 @@
 		E25A20F62B5FBF8600525E63 /* MPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A20F52B5FBF8600525E63 /* MPView.swift */; };
 		E25A20F82B5FC15C00525E63 /* MP.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A20F72B5FC15C00525E63 /* MP.swift */; };
 		E25A20FA2B5FCCF500525E63 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A20F92B5FCCF500525E63 /* ListItem.swift */; };
+		E25A20FC2B5FEDB100525E63 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E25A20FB2B5FEDB100525E63 /* README.md */; };
 		E29E7E2C2B58668B007CB6D9 /* SejmAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E7E2B2B58668B007CB6D9 /* SejmAppApp.swift */; };
 		E29E7E2E2B58668B007CB6D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E7E2D2B58668B007CB6D9 /* ContentView.swift */; };
 		E29E7E302B58668C007CB6D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E29E7E2F2B58668C007CB6D9 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		E25A20F52B5FBF8600525E63 /* MPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPView.swift; sourceTree = "<group>"; };
 		E25A20F72B5FC15C00525E63 /* MP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MP.swift; sourceTree = "<group>"; };
 		E25A20F92B5FCCF500525E63 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		E25A20FB2B5FEDB100525E63 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E29E7E282B58668B007CB6D9 /* SejmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SejmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E29E7E2B2B58668B007CB6D9 /* SejmAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SejmAppApp.swift; sourceTree = "<group>"; };
 		E29E7E2D2B58668B007CB6D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				E20B975B2B5EDA21005ADF5F /* ClubVote.swift */,
 				E29E7E472B5877D4007CB6D9 /* CustomPDFView.swift */,
 				E29E7E492B587B6B007CB6D9 /* Localizable.xcstrings */,
+				E25A20FB2B5FEDB100525E63 /* README.md */,
 				E29E7E2F2B58668C007CB6D9 /* Assets.xcassets */,
 				E29E7E312B58668C007CB6D9 /* Preview Content */,
 			);
@@ -168,6 +171,7 @@
 			files = (
 				E29E7E332B58668C007CB6D9 /* Preview Assets.xcassets in Resources */,
 				E29E7E302B58668C007CB6D9 /* Assets.xcassets in Resources */,
+				E25A20FC2B5FEDB100525E63 /* README.md in Resources */,
 				E29E7E4A2B587B6B007CB6D9 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,16 +332,19 @@
 				DEVELOPMENT_TEAM = 48KVXB55T9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sejm App";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.packowski.SejmApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -357,16 +364,19 @@
 				DEVELOPMENT_TEAM = 48KVXB55T9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sejm App";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.packowski.SejmApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
