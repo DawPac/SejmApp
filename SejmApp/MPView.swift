@@ -34,7 +34,7 @@ struct MPView: View {
     }
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List (searchResults, children: \.child) { row in
                 if (row.key != "email:") {
                     HStack {
