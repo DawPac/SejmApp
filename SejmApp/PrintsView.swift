@@ -12,7 +12,7 @@ struct PrintsView: View {
     @State var prints:[Print] = []
     @State var search:String = ""
     @State var listItems:[listItem] = []
-
+    
     var searchResults: [listItem] {
         if search.isEmpty {
             return listItems
@@ -45,7 +45,11 @@ struct PrintsView: View {
                     Text(row.key)
                     Spacer()
                     if (row.key == "filename") {
-                        Link("\(row.value)", destination: URL(string: "https://api.sejm.gov.pl/sejm/term10/prints/\(row.value.split(separator: ".")[0])/\(row.value)")!)
+                        if (UserDefaults.standard.bool(forKey: "show-pdf")) {
+                            NavigationLink("\(row.value)") {CustomPDFView(PDFUrl: "https://api.sejm.gov.pl/sejm/term10/prints/\(row.value.split(separator: ".")[0])/\(row.value)")}
+                        } else {
+                            Link("\(row.value)", destination: URL(string: "https://api.sejm.gov.pl/sejm/term10/prints/\(row.value.split(separator: ".")[0])/\(row.value)")!)
+                        }
                     } else {
                         Text(row.value)
                     }

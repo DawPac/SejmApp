@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Print: Codable, Hashable {
+struct Print: Codable {
     var number:String
     var deliveryDate:String
     var title:String

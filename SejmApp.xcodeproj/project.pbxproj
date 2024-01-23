@@ -23,6 +23,7 @@
 		E29E7E4C2B5884CD007CB6D9 /* Vote.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E7E4B2B5884CD007CB6D9 /* Vote.swift */; };
 		E29E7E4E2B588866007CB6D9 /* VotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E7E4D2B588866007CB6D9 /* VotesView.swift */; };
 		E29E7E502B588C0C007CB6D9 /* ElecVotingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E7E4F2B588C0C007CB6D9 /* ElecVotingView.swift */; };
+		E2E0F5172B600A870082FF10 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2E0F5162B600A870082FF10 /* Settings.bundle */; };
 		E2F97C812B593D3000C42E2B /* ListVotingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F97C802B593D3000C42E2B /* ListVotingView.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		E29E7E4B2B5884CD007CB6D9 /* Vote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vote.swift; sourceTree = "<group>"; };
 		E29E7E4D2B588866007CB6D9 /* VotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotesView.swift; sourceTree = "<group>"; };
 		E29E7E4F2B588C0C007CB6D9 /* ElecVotingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElecVotingView.swift; sourceTree = "<group>"; };
+		E2E0F5162B600A870082FF10 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		E2F97C802B593D3000C42E2B /* ListVotingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVotingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +96,7 @@
 				E20B975B2B5EDA21005ADF5F /* ClubVote.swift */,
 				E29E7E472B5877D4007CB6D9 /* CustomPDFView.swift */,
 				E29E7E492B587B6B007CB6D9 /* Localizable.xcstrings */,
+				E2E0F5162B600A870082FF10 /* Settings.bundle */,
 				E29E7E2F2B58668C007CB6D9 /* Assets.xcassets */,
 				E29E7E312B58668C007CB6D9 /* Preview Content */,
 			);
@@ -173,6 +176,7 @@
 			files = (
 				E29E7E332B58668C007CB6D9 /* Preview Assets.xcassets in Resources */,
 				E29E7E302B58668C007CB6D9 /* Assets.xcassets in Resources */,
+				E2E0F5172B600A870082FF10 /* Settings.bundle in Resources */,
 				E25A20FC2B5FEDB100525E63 /* README.md in Resources */,
 				E29E7E4A2B587B6B007CB6D9 /* Localizable.xcstrings in Resources */,
 			);
@@ -347,7 +351,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.packowski.SejmApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -384,7 +388,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.packowski.SejmApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

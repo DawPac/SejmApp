@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MP: Decodable, Identifiable {
+struct MP: Decodable {
     var active:Bool
     var birthDate:String
     var birthLocation:String
