@@ -11,12 +11,13 @@ struct PrintsView: View {
     
     @State var prints:[Print] = []
     @State var search:String = ""
-    
-    var searchResults: [Print] {
+    @State var listItems:[listItem] = []
+
+    var searchResults: [listItem] {
         if search.isEmpty {
-            return prints
+            return listItems
         } else {
-            return prints.filter { $0.title.lowercased().contains(search.lowercased()) || String($0.number) == search}
+            return listItems.filter { "\($0.key)".lowercased().contains(search.lowercased()) }
         }
     }
     
@@ -24,6 +25,14 @@ struct PrintsView: View {
         do {
             let (data, _) = try await URLSession.shared.data(from: URL(string: "https://api.sejm.gov.pl/sejm/term10/prints")!)
             prints = try JSONDecoder().decode([Print].self, from: data)
+            for i in prints {
+                listItems.append(listItem(key: "print \(i.number): \(i.title)", value: "", child: [listItem(key: "attachments", value: "", child: []), listItem(key: "date:", value: i.deliveryDate)]))
+                for j in i.attachments {
+                    if (j.contains(".pdf")) {
+                        listItems[listItems.count-1].child![0].child?.append(listItem(key: "filename", value: j))
+                    }
+                }
+            }
         } catch {
             print("error")
         }
@@ -31,9 +40,15 @@ struct PrintsView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(searchResults.reversed(), id: \.self) {print in
-                    NavigationLink("print \(print.number) - \(print.title)") { CustomPDFView(PDFUrl: "https://api.sejm.gov.pl/sejm/term10/prints/\(print.number)/\(print.attachments[0])") }
+            List (searchResults.reversed(), children: \.child) { row in
+                HStack {
+                    Text(row.key)
+                    Spacer()
+                    if (row.key == "filename") {
+                        Link("\(row.value)", destination: URL(string: "https://api.sejm.gov.pl/sejm/term10/prints/\(row.value.split(separator: ".")[0])/\(row.value)")!)
+                    } else {
+                        Text(row.value)
+                    }
                 }
             }
             .navigationTitle("prints")

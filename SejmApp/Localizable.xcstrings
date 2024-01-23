@@ -91,6 +91,16 @@
         }
       }
     },
+    "attachments" : {
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Załączniki:"
+          }
+        }
+      }
+    },
     "birthDate:" : {
       "localizations" : {
         "en" : {
@@ -151,6 +161,16 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "Klub:"
+          }
+        }
+      }
+    },
+    "date:" : {
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data:"
           }
         }
       }
@@ -219,6 +239,16 @@
         }
       }
     },
+    "filename" : {
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plik:"
+          }
+        }
+      }
+    },
     "mps" : {
       "localizations" : {
         "en" : {
@@ -283,18 +313,18 @@
         }
       }
     },
-    "print %@ - %@" : {
+    "print %@: %@" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Print %1$@ - %2$@"
+            "state" : "new",
+            "value" : "print %1$@: %2$@"
           }
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Druk %@ - %@"
+            "state" : "translated",
+            "value" : "Druk %1$@: %2$@"
           }
         }
       }
