@@ -24,6 +24,12 @@
             "state" : "new",
             "value" : "%1$@ - %2$@"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ - %2$@"
+          }
         }
       }
     },
@@ -53,7 +59,7 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Nieobecnych"
           }
         }
@@ -69,7 +75,7 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Wstrzymało się"
           }
         }
@@ -93,6 +99,12 @@
     },
     "attachments" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Attachments"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -111,7 +123,7 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Data urodzenia:"
           }
         }
@@ -127,7 +139,7 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Miejsce urodzenia:"
           }
         }
@@ -143,7 +155,7 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Klub"
           }
         }
@@ -159,7 +171,7 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Klub:"
           }
         }
@@ -167,6 +179,12 @@
     },
     "date:" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data:"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -185,7 +203,7 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Nazwa okręgu:"
           }
         }
@@ -201,7 +219,7 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Numer okręgu:"
           }
         }
@@ -217,7 +235,7 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Wykształcenie:"
           }
         }
@@ -233,7 +251,7 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "E-mail:"
           }
         }
@@ -241,6 +259,12 @@
     },
     "filename" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "File:"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -275,7 +299,7 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Przeciw"
           }
         }
@@ -307,7 +331,7 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Liczba głosów:"
           }
         }
@@ -317,8 +341,8 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "print %1$@: %2$@"
+            "state" : "translated",
+            "value" : "Print %1$@: %2$@"
           }
         },
         "pl" : {
@@ -371,7 +395,7 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Typ"
           }
         }
@@ -387,7 +411,7 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Województwo:"
           }
         }
@@ -419,7 +443,7 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Liczba głosów"
           }
         }
@@ -435,7 +459,7 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Za"
           }
         }
