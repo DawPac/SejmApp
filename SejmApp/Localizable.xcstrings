@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "%@" : {
       "localizations" : {
         "en" : {
@@ -93,22 +96,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wstrzymało się: %lld"
-          }
-        }
-      }
-    },
-    "attachments" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Attachments"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Załączniki:"
           }
         }
       }
@@ -257,18 +244,18 @@
         }
       }
     },
-    "filename" : {
+    "lives" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "File:"
+            "value" : "Lives"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Plik:"
+            "value" : "Transmisje"
           }
         }
       }
@@ -333,6 +320,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Liczba głosów:"
+          }
+        }
+      }
+    },
+    "open" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otwórz"
           }
         }
       }

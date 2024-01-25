@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct Live: Decodable, Hashable {
+    var otherVideoLinks: [String]?
+    var room: String
+    var videoLink: String
+}

@@ -19,6 +19,12 @@ struct ContentView: View {
             MPView().tabItem {
                 Label("mps", systemImage: "person.3")
             }.tag(3)
+            LiveView().refreshable {
+                print("test")
+            }
+            .tabItem {
+                Label("lives", systemImage: "play.tv")
+            }
         }
     }
 }

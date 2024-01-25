@@ -12,6 +12,7 @@ struct PrintsView: View {
     @State var prints:[Print] = []
     @State var search:String = ""
     @State var listItems:[listItem] = []
+    @State var showPDF = UserDefaults.standard.bool(forKey: "show-pdf")
     
     var searchResults: [listItem] {
         if search.isEmpty {
@@ -26,12 +27,7 @@ struct PrintsView: View {
             let (data, _) = try await URLSession.shared.data(from: URL(string: "https://api.sejm.gov.pl/sejm/term10/prints")!)
             prints = try JSONDecoder().decode([Print].self, from: data)
             for i in prints {
-                listItems.append(listItem(key: "print \(i.number): \(i.title)", value: "", child: [listItem(key: "attachments", value: "", child: []), listItem(key: "date:", value: i.deliveryDate)]))
-                for j in i.attachments {
-                    if (j.contains(".pdf")) {
-                        listItems[listItems.count-1].child![0].child?.append(listItem(key: "filename", value: j))
-                    }
-                }
+                listItems.append(listItem(key: "print \(i.number): \(i.title)", value: "", child: [listItem(key: "open", value: "https://api.sejm.gov.pl/sejm/term10/prints/\(i.number)/\(i.number).pdf"), listItem(key: "date:", value: i.deliveryDate)]))
             }
         } catch {
             print("error")
@@ -42,15 +38,15 @@ struct PrintsView: View {
         NavigationView {
             List (searchResults.reversed(), children: \.child) { row in
                 HStack {
-                    Text(row.key)
-                    Spacer()
-                    if (row.key == "filename") {
-                        if (UserDefaults.standard.bool(forKey: "show-pdf")) {
-                            NavigationLink("\(row.value)") {CustomPDFView(PDFUrl: "https://api.sejm.gov.pl/sejm/term10/prints/\(row.value.split(separator: ".")[0])/\(row.value)")}
+                    if (row.key == "open") {
+                        if (showPDF) {
+                            NavigationLink("\(row.key)"){CustomPDFView(PDFUrl: "\(row.value)")}
                         } else {
-                            Link("\(row.value)", destination: URL(string: "https://api.sejm.gov.pl/sejm/term10/prints/\(row.value.split(separator: ".")[0])/\(row.value)")!)
+                            Link("\(row.key)", destination: URL(string: row.value)!)
                         }
                     } else {
+                        Text(row.key)
+                        Spacer()
                         Text(row.value)
                     }
                 }

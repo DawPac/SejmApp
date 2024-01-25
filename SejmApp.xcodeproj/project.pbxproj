@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E20B975C2B5EDA21005ADF5F /* ClubVote.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B975B2B5EDA21005ADF5F /* ClubVote.swift */; };
+		E21EB9582B6285D800DA1495 /* LiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21EB9572B6285D800DA1495 /* LiveView.swift */; };
+		E21EB95A2B62A37500DA1495 /* Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21EB9592B62A37500DA1495 /* Live.swift */; };
 		E25A20F62B5FBF8600525E63 /* MPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A20F52B5FBF8600525E63 /* MPView.swift */; };
 		E25A20F82B5FC15C00525E63 /* MP.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A20F72B5FC15C00525E63 /* MP.swift */; };
 		E25A20FA2B5FCCF500525E63 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A20F92B5FCCF500525E63 /* ListItem.swift */; };
@@ -29,6 +31,8 @@
 
 /* Begin PBXFileReference section */
 		E20B975B2B5EDA21005ADF5F /* ClubVote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubVote.swift; sourceTree = "<group>"; };
+		E21EB9572B6285D800DA1495 /* LiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveView.swift; sourceTree = "<group>"; };
+		E21EB9592B62A37500DA1495 /* Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Live.swift; sourceTree = "<group>"; };
 		E25A20F52B5FBF8600525E63 /* MPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPView.swift; sourceTree = "<group>"; };
 		E25A20F72B5FC15C00525E63 /* MP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MP.swift; sourceTree = "<group>"; };
 		E25A20F92B5FCCF500525E63 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
@@ -87,11 +91,13 @@
 				E29E7E4D2B588866007CB6D9 /* VotesView.swift */,
 				E29E7E4F2B588C0C007CB6D9 /* ElecVotingView.swift */,
 				E2F97C802B593D3000C42E2B /* ListVotingView.swift */,
+				E21EB9572B6285D800DA1495 /* LiveView.swift */,
 				E29E7E3E2B586814007CB6D9 /* PrintsView.swift */,
 				E25A20F52B5FBF8600525E63 /* MPView.swift */,
 				E29E7E432B586D57007CB6D9 /* Print.swift */,
 				E29E7E4B2B5884CD007CB6D9 /* Vote.swift */,
 				E25A20F72B5FC15C00525E63 /* MP.swift */,
+				E21EB9592B62A37500DA1495 /* Live.swift */,
 				E25A20F92B5FCCF500525E63 /* ListItem.swift */,
 				E20B975B2B5EDA21005ADF5F /* ClubVote.swift */,
 				E29E7E472B5877D4007CB6D9 /* CustomPDFView.swift */,
@@ -194,9 +200,11 @@
 				E20B975C2B5EDA21005ADF5F /* ClubVote.swift in Sources */,
 				E29E7E4C2B5884CD007CB6D9 /* Vote.swift in Sources */,
 				E25A20F62B5FBF8600525E63 /* MPView.swift in Sources */,
+				E21EB9582B6285D800DA1495 /* LiveView.swift in Sources */,
 				E29E7E4E2B588866007CB6D9 /* VotesView.swift in Sources */,
 				E2F97C812B593D3000C42E2B /* ListVotingView.swift in Sources */,
 				E29E7E2E2B58668B007CB6D9 /* ContentView.swift in Sources */,
+				E21EB95A2B62A37500DA1495 /* Live.swift in Sources */,
 				E29E7E2C2B58668B007CB6D9 /* SejmAppApp.swift in Sources */,
 				E25A20F82B5FC15C00525E63 /* MP.swift in Sources */,
 				E29E7E502B588C0C007CB6D9 /* ElecVotingView.swift in Sources */,
@@ -335,6 +343,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = SejmApp/SejmApp.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SejmApp/Preview Content\"";
@@ -348,12 +357,12 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = net.packowski.SejmApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -373,6 +382,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = SejmApp/SejmApp.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SejmApp/Preview Content\"";
@@ -386,12 +396,12 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = net.packowski.SejmApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
