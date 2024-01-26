@@ -27,7 +27,7 @@ struct PrintsView: View {
             let (data, _) = try await URLSession.shared.data(from: URL(string: "https://api.sejm.gov.pl/sejm/term10/prints")!)
             prints = try JSONDecoder().decode([Print].self, from: data)
             for i in prints {
-                listItems.append(listItem(key: "print \(i.number): \(i.title)", value: "", child: [listItem(key: "open", value: "https://api.sejm.gov.pl/sejm/term10/prints/\(i.number)/\(i.number).pdf"), listItem(key: "date:", value: i.deliveryDate)]))
+                listItems.append(listItem(key: "print \(i.number): \(i.title)", value: "", child: [listItem(key: "open", value: "https://api.sejm.gov.pl/sejm/term10/prints/\(i.number)/\(i.number).pdf"), listItem(key: "details", value: "https://www.sejm.gov.pl/sejm10.nsf/PrzebiegProc.xsp?nr=\(i.number)"), listItem(key: "date:", value: i.deliveryDate)]))
             }
         } catch {
             print("error")
@@ -44,6 +44,8 @@ struct PrintsView: View {
                         } else {
                             Link("\(row.key)", destination: URL(string: row.value)!)
                         }
+                    } else if (row.key == "details") {
+                        Link("\(row.key)", destination: URL(string: row.value)!)
                     } else {
                         Text(row.key)
                         Spacer()
@@ -51,13 +53,13 @@ struct PrintsView: View {
                     }
                 }
             }
+            .refreshable {
+                await loadPrints()
+            }
             .navigationTitle("prints")
         }
         .searchable(text: $search, placement: .navigationBarDrawer(displayMode: .always))
         .autocorrectionDisabled(true)
-        .refreshable {
-            await loadPrints()
-        }
         .task {
             if (prints.isEmpty) {
                 await loadPrints()

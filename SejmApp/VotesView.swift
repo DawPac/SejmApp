@@ -61,13 +61,13 @@ struct VotesView: View {
                     }
                 }
             }
+            .refreshable {
+                await loadVotes()
+            }
             .navigationTitle("votes")
         }
         .searchable(text: $search, placement: .navigationBarDrawer(displayMode: .always))
         .autocorrectionDisabled(true)
-        .refreshable {
-            await loadVotes()
-        }
         .task {
             if (votes.isEmpty) {
                 await loadVotes()

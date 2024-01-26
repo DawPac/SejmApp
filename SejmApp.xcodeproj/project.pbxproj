@@ -33,6 +33,7 @@
 		E20B975B2B5EDA21005ADF5F /* ClubVote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubVote.swift; sourceTree = "<group>"; };
 		E21EB9572B6285D800DA1495 /* LiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveView.swift; sourceTree = "<group>"; };
 		E21EB9592B62A37500DA1495 /* Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Live.swift; sourceTree = "<group>"; };
+		E23EA6CD2B63B36900A33FB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E25A20F52B5FBF8600525E63 /* MPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPView.swift; sourceTree = "<group>"; };
 		E25A20F72B5FC15C00525E63 /* MP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MP.swift; sourceTree = "<group>"; };
 		E25A20F92B5FCCF500525E63 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
@@ -85,6 +86,7 @@
 		E29E7E2A2B58668B007CB6D9 /* SejmApp */ = {
 			isa = PBXGroup;
 			children = (
+				E23EA6CD2B63B36900A33FB6 /* Info.plist */,
 				E25A20FD2B5FF1C900525E63 /* SejmApp.entitlements */,
 				E29E7E2B2B58668B007CB6D9 /* SejmAppApp.swift */,
 				E29E7E2D2B58668B007CB6D9 /* ContentView.swift */,
@@ -348,8 +350,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SejmApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 48KVXB55T9;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SejmApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SejmApka;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -362,7 +366,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.2;
+				MARKETING_VERSION = 1.1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = net.packowski.SejmApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -387,8 +391,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SejmApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 48KVXB55T9;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SejmApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SejmApka;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -401,7 +407,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.2;
+				MARKETING_VERSION = 1.1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = net.packowski.SejmApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

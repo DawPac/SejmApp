@@ -29,6 +29,10 @@ extension View {
 
 struct LiveView: View {
     
+    @State var lives:[Live] = []
+    @State var players:[AVPlayer] = []
+    @State var orientation = UIDeviceOrientation.unknown
+
     func loadURLs() async {
         do {
             let (data, _) = try await URLSession.shared.data(from: URL(string: "https://api.sejm.gov.pl/sejm/term10/videos/today")!)
@@ -43,28 +47,19 @@ struct LiveView: View {
                     }
                 }
             }
-            for i in players {
-                i.volume = 0
-                i.play()
-            }
-            players[0].volume = 1
         } catch {
             print("error")
         }
     }
     
-    @State var lives:[Live] = []
-    @State var players:[AVPlayer] = []
-    @State var orientation = UIDeviceOrientation.unknown
-
     var body: some View {
-        NavigationView {
+        NavigationStack {
             if (!players.isEmpty) {
                 if (!orientation.isLandscape) {
                     VStack {
                         ForEach(Range(0...players.count - 1), id: \.self) {index in
                             if (index < 3) {
-                                CustomPlayerView(player: players[index])
+                                CustomPlayerView(player: players[index], playSound: index == 0)
                             }
                         }
                     }
@@ -73,14 +68,14 @@ struct LiveView: View {
                         VStack {
                             ForEach(Range(0...players.count - 1), id: \.self) {index in
                                 if (index < 2) {
-                                    CustomPlayerView(player: players[index])
+                                    CustomPlayerView(player: players[index], playSound: index == 0)
                                 }
                             }
                         }
                         VStack {
                             ForEach(Range(0...players.count - 1), id: \.self) {index in
                                 if (index > 1 && index < 4) {
-                                    CustomPlayerView(player: players[index])
+                                    CustomPlayerView(player: players[index], playSound: false)
                                 }
                             }
                         }
@@ -89,7 +84,9 @@ struct LiveView: View {
             }
         }
         .task {
-            await loadURLs()
+            if (players.isEmpty) {
+                await loadURLs()
+            }
         }
         .onRotate { newOrientation in
             orientation = newOrientation
@@ -99,7 +96,20 @@ struct LiveView: View {
 
 struct CustomPlayerView: UIViewControllerRepresentable {
     let player: AVPlayer
+    let playSound: Bool
     func makeUIViewController(context: UIViewControllerRepresentableContext<CustomPlayerView>) -> AVPlayerViewController {
+        if (playSound) {
+            do {
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
+                try AVAudioSession.sharedInstance().setActive(true)
+            } catch {
+                player.isMuted = true
+            }
+        } else {
+            player.isMuted = true
+        }
+        player.play()
+        player.audiovisualBackgroundPlaybackPolicy = .continuesIfPossible
         let controller = AVPlayerViewController()
         controller.player = player
         controller.showsPlaybackControls = false
@@ -110,6 +120,7 @@ struct CustomPlayerView: UIViewControllerRepresentable {
         
     }
 }
+
 /*
 #Preview {
     LiveView()
