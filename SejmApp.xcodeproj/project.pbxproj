@@ -26,6 +26,8 @@
 		E29E7E4E2B588866007CB6D9 /* VotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E7E4D2B588866007CB6D9 /* VotesView.swift */; };
 		E29E7E502B588C0C007CB6D9 /* ElecVotingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E7E4F2B588C0C007CB6D9 /* ElecVotingView.swift */; };
 		E2E0F5172B600A870082FF10 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2E0F5162B600A870082FF10 /* Settings.bundle */; };
+		E2E686D32B6AC4D900B2BDC0 /* DUView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E686D22B6AC4D900B2BDC0 /* DUView.swift */; };
+		E2E686D52B6ACD9E00B2BDC0 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E686D42B6ACD9E00B2BDC0 /* Journal.swift */; };
 		E2F97C812B593D3000C42E2B /* ListVotingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F97C802B593D3000C42E2B /* ListVotingView.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,8 @@
 		E29E7E4D2B588866007CB6D9 /* VotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotesView.swift; sourceTree = "<group>"; };
 		E29E7E4F2B588C0C007CB6D9 /* ElecVotingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElecVotingView.swift; sourceTree = "<group>"; };
 		E2E0F5162B600A870082FF10 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		E2E686D22B6AC4D900B2BDC0 /* DUView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUView.swift; sourceTree = "<group>"; };
+		E2E686D42B6ACD9E00B2BDC0 /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
 		E2F97C802B593D3000C42E2B /* ListVotingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVotingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,8 +99,10 @@
 				E2F97C802B593D3000C42E2B /* ListVotingView.swift */,
 				E21EB9572B6285D800DA1495 /* LiveView.swift */,
 				E29E7E3E2B586814007CB6D9 /* PrintsView.swift */,
+				E2E686D22B6AC4D900B2BDC0 /* DUView.swift */,
 				E25A20F52B5FBF8600525E63 /* MPView.swift */,
 				E29E7E432B586D57007CB6D9 /* Print.swift */,
+				E2E686D42B6ACD9E00B2BDC0 /* Journal.swift */,
 				E29E7E4B2B5884CD007CB6D9 /* Vote.swift */,
 				E25A20F72B5FC15C00525E63 /* MP.swift */,
 				E21EB9592B62A37500DA1495 /* Live.swift */,
@@ -207,8 +213,10 @@
 				E2F97C812B593D3000C42E2B /* ListVotingView.swift in Sources */,
 				E29E7E2E2B58668B007CB6D9 /* ContentView.swift in Sources */,
 				E21EB95A2B62A37500DA1495 /* Live.swift in Sources */,
+				E2E686D52B6ACD9E00B2BDC0 /* Journal.swift in Sources */,
 				E29E7E2C2B58668B007CB6D9 /* SejmAppApp.swift in Sources */,
 				E25A20F82B5FC15C00525E63 /* MP.swift in Sources */,
+				E2E686D32B6AC4D900B2BDC0 /* DUView.swift in Sources */,
 				E29E7E502B588C0C007CB6D9 /* ElecVotingView.swift in Sources */,
 				E25A20FA2B5FCCF500525E63 /* ListItem.swift in Sources */,
 				E29E7E442B586D57007CB6D9 /* Print.swift in Sources */,
@@ -361,12 +369,12 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.3;
+				MARKETING_VERSION = 1.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = net.packowski.SejmApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -402,12 +410,12 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.3;
+				MARKETING_VERSION = 1.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = net.packowski.SejmApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

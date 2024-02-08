@@ -12,17 +12,17 @@ struct ContentView: View {
         TabView() {
             PrintsView().tabItem {
                 Label("prints", systemImage: "doc.richtext")
-            }.tag(1)
+            }
             VotesView().tabItem {
                 Label("votes", systemImage: "hand.raised")
-            }.tag(2)
+            }
             MPView().tabItem {
                 Label("mps", systemImage: "person.3")
-            }.tag(3)
-            LiveView().refreshable {
-                print("test")
             }
-            .tabItem {
+            DUView().tabItem {
+                Label("du", systemImage: "newspaper")
+            }
+            LiveView().tabItem {
                 Label("lives", systemImage: "play.tv")
             }
         }

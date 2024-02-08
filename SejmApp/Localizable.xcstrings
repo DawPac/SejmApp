@@ -52,6 +52,16 @@
         }
       }
     },
+    "%lld. %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld. %2$@"
+          }
+        }
+      }
+    },
     "absent" : {
       "localizations" : {
         "en" : {
@@ -182,6 +192,12 @@
     },
     "details" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Details"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -222,6 +238,22 @@
         }
       }
     },
+    "du" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Journals"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dzienniki urzędowe"
+          }
+        }
+      }
+    },
     "educationLevel:" : {
       "localizations" : {
         "en" : {
@@ -250,6 +282,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "E-mail:"
+          }
+        }
+      }
+    },
+    "journal: " : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Journal:"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dziennik: "
           }
         }
       }
@@ -398,16 +446,8 @@
         }
       }
     },
-    "sync" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Synchronizuj"
-          }
-        }
-      }
+    "test" : {
+
     },
     "type" : {
       "localizations" : {
@@ -469,6 +509,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Liczba głosów"
+          }
+        }
+      }
+    },
+    "year: " : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Year:"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rok: "
           }
         }
       }
