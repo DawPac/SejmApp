@@ -30,58 +30,84 @@ extension View {
 struct LiveView: View {
     
     @State var lives:[Live] = []
+    @State var titles:[String] = []
     @State var players:[AVPlayer] = []
     @State var orientation = UIDeviceOrientation.unknown
-
+    @State var selectedRoom = "Sala Posiedzeń"
+    
     func loadURLs() async {
         do {
             let (data, _) = try await URLSession.shared.data(from: URL(string: "https://api.sejm.gov.pl/sejm/term10/videos/today")!)
             lives = try JSONDecoder().decode([Live].self, from: data)
+            titles = []
             for i in lives {
-                if (i.room == "Sala Posiedzeń") {
-                    players.append(AVPlayer(url: URL(string: i.videoLink.split(separator: "?")[0].replacing("nvr", with: "livehls").replacing("http://", with: "https://")+"/playlist.m3u8")!))
-                    if (i.otherVideoLinks != nil) {
-                        for j in i.otherVideoLinks! {
-                            players.append(AVPlayer(url: URL(string: j.split(separator: "?")[0].replacing("nvr", with: "livehls").replacing("http://", with: "https://").replacing(" ", with: "")+"/playlist.m3u8")!))
-                        }
-                    }
-                }
+                titles.append(i.room)
             }
         } catch {
             print("error")
         }
     }
     
-    var body: some View {
-        NavigationStack {
-            if (!players.isEmpty) {
-                if (!orientation.isLandscape) {
-                    VStack {
-                        ForEach(Range(0...players.count - 1), id: \.self) {index in
-                            if (index < 3) {
-                                CustomPlayerView(player: players[index], playSound: index == 0)
-                            }
-                        }
+    func loadPlayers() {
+        players = []
+        for i in lives {
+            if (i.room == selectedRoom) {
+                players.append(AVPlayer(url: URL(string: i.videoLink.split(separator: "?")[0].replacing("nvr", with: "livehls").replacing("http://", with: "https://")+"/playlist.m3u8")!))
+                if (i.otherVideoLinks != nil) {
+                    for j in i.otherVideoLinks! {
+                        players.append(AVPlayer(url: URL(string: j.split(separator: "?")[0].replacing("nvr", with: "livehls").replacing("http://", with: "https://").replacing(" ", with: "")+"/playlist.m3u8")!))
                     }
-                } else {
-                    HStack {
+                }
+            }
+        }
+    }
+    
+    var body: some View {
+        NavigationView {
+            VStack {
+                if (!players.isEmpty) {
+                    if (!orientation.isLandscape) {
                         VStack {
                             ForEach(Range(0...players.count - 1), id: \.self) {index in
-                                if (index < 2) {
+                                if (index < 3) {
                                     CustomPlayerView(player: players[index], playSound: index == 0)
                                 }
                             }
                         }
-                        VStack {
-                            ForEach(Range(0...players.count - 1), id: \.self) {index in
-                                if (index > 1 && index < 4) {
-                                    CustomPlayerView(player: players[index], playSound: false)
+                    } else {
+                        HStack {
+                            VStack {
+                                ForEach(Range(0...players.count - 1), id: \.self) {index in
+                                    if (index < 2) {
+                                        CustomPlayerView(player: players[index], playSound: index == 0)
+                                    }
+                                }
+                            }
+                            VStack {
+                                ForEach(Range(0...players.count - 1), id: \.self) {index in
+                                    if (index > 1 && index < 4) {
+                                        CustomPlayerView(player: players[index], playSound: false)
+                                    }
                                 }
                             }
                         }
                     }
                 }
             }
+            .toolbar{
+                if !orientation.isLandscape {
+                    ToolbarItem(placement: .bottomBar) {
+                        Picker("title", selection: $selectedRoom) {
+                            ForEach(titles, id: \.self) { title in
+                                Text(title).tag(title)
+                            }
+                        }
+                    }
+                }
+            }
+            .onChange(of: selectedRoom, {
+                loadPlayers()
+            })
         }
         .task {
             if (players.isEmpty) {

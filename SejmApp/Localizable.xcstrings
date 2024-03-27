@@ -287,6 +287,7 @@
       }
     },
     "journal: " : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -449,6 +450,9 @@
     "test" : {
 
     },
+    "title" : {
+
+    },
     "type" : {
       "localizations" : {
         "en" : {
@@ -514,6 +518,7 @@
       }
     },
     "year: " : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

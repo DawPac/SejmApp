@@ -58,15 +58,17 @@ struct DUView: View {
                         }
                     }
                 }
-                Spacer()
-                HStack {
-                    Text("year: ")
+            }
+            .navigationTitle("du")
+            .toolbar {
+                ToolbarItem(placement: .bottomBar) {
                     Picker("", selection: $selectedYear) {
                         ForEach(years, id: \.self) { year in
                             Text("\(year)")
                         }
                     }
-                    Text("journal: ")
+                }
+                ToolbarItem(placement: .bottomBar) {
                     Picker("", selection: $selectedJournal) {
                         ForEach(journals, id: \.self) { journal in
                             Text(journal)
@@ -74,7 +76,6 @@ struct DUView: View {
                     }
                 }
             }
-            .navigationTitle("du")
         }
         .searchable(text: $search, placement: .navigationBarDrawer(displayMode: .always))
         .autocorrectionDisabled(true)
